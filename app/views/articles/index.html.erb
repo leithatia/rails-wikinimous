@@ -1,0 +1,8 @@
+<ul d-flex>
+  <% @articles.each do |article| %>
+  <div class="headings">
+    <li><h4><%= link_to article[:title], article_path(article) %></h4></li>
+    <li><%= article[:content] %></li>
+  </div>
+  <% end %>
+</ul>

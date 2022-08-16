@@ -1,0 +1,22 @@
+  <h3>New article:</h3>
+
+<%= form_with url: "/articles", method: :post do |form| %>
+
+  <div class="d-flex flex-column mt-3">
+
+    <div>
+      <%= form.label :title %>
+      <div><%= form.text_field :title, style: 'width:100%;' %></div>
+    </div>
+
+    <div>
+      <%= form.label :content %>
+      <div><%= form.text_area :content, rows: 10, style: 'width:100%;' %></div>
+    </div>
+
+    <div>
+      <%= form.submit "Submit" %>
+    </div>
+  </div>
+
+<% end %>
